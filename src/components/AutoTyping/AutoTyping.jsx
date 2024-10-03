@@ -88,7 +88,7 @@ export default function AutoTypingPortfolio({ names, duration }) {
                     {names.map((elem, i) => <li key={i} ref={l => liRef.current[i] = l}>{elem}</li>)}
                 </ul>
                 <button className=' rounded-full border-none outline-none mt-14 hover:scale-125 transition-transform duration-300'>
-                    <a className='text-black' href="../../../public/Youssef_Yasser_Frontend_Developer_CV.pdf" download={true}>
+                    <a className='text-black' href="/public/Youssef_Yasser_Frontend_Developer_CV.pdf" download='Youssef_Yasser_Frontend_Developer_CV.pdf'>
                         Download CV
                     </a>
                 </button>
