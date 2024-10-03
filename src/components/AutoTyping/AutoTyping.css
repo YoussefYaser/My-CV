@@ -1,0 +1,80 @@
+.typing-portfolio .box{
+    width: fit-content;
+    margin: auto;
+    /* background-color: red; */
+    padding: 1.5rem 3rem;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    --font : 1.5rem;
+    white-space: nowrap;
+}
+
+@media(max-width: 500px){
+    .typing-portfolio .box{
+        --font : 1.2rem
+    }
+}
+
+@media(max-width: 320px){
+    .typing-portfolio .box{
+        --font : 1rem;
+        padding: 1.5rem 1rem;
+    }
+}
+
+.typing-portfolio .box ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: var(--font);
+    background-color: black;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.typing-portfolio .box ul li{
+    width: fit-content;
+}
+
+.typing-portfolio .box > div{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    font-size: var(--font);
+    /* background-color: green; */
+}
+
+.typing-portfolio .box p{
+    margin: 0 0.25rem;
+}
+
+.typing-portfolio .box span{
+    --typing : ;
+    margin: 0  0 0 0.25rem ;
+    /* background-color: gold; */
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+@keyframes typing{
+    0%{
+        width: 0;
+    }
+    40%{
+        width: var(--typing);
+    }
+    60%{
+        width: var(--typing);
+    }
+    100%{
+        width: 0;
+    }
+}
+
