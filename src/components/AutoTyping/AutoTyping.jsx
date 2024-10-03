@@ -1,8 +1,18 @@
 
 import { useEffect, useRef, useState } from 'react'
 import './AutoTyping.css'
+import cv from '../../assets/Youssef_Yasser_Frontend_Developer_CV.pdf'
 
 export default function AutoTypingPortfolio({ names, duration }) {
+
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = cv;  // Path to your file in the public folder
+        link.download = 'Youssef_Yasser_Frontend_Developer_CV.pdf';  // The file name for the download
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
     let [typing, setTyping] = useState(names[0]);
     let [spanStyle, setSpanStyle] = useState({
@@ -88,7 +98,7 @@ export default function AutoTypingPortfolio({ names, duration }) {
                     {names.map((elem, i) => <li key={i} ref={l => liRef.current[i] = l}>{elem}</li>)}
                 </ul>
                 <button className=' rounded-full border-none outline-none mt-14 hover:scale-125 transition-transform duration-300'>
-                    <a className='text-black' href="/public/Youssef_Yasser_Frontend_Developer_CV.pdf" download='Youssef_Yasser_Frontend_Developer_CV.pdf'>
+                    <a className='text-black' onClick={handleDownload}>
                         Download CV
                     </a>
                 </button>
