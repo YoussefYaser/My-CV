@@ -97,8 +97,16 @@ export default function AutoTypingPortfolio({ names, duration }) {
                 <ul className='text-[2rem]'>
                     {names.map((elem, i) => <li key={i} ref={l => liRef.current[i] = l}>{elem}</li>)}
                 </ul>
-                <button className=' bg-white rounded-full border-none outline-none mt-14 hover:scale-125 transition-transform duration-300'>
+
+                {/* <button className=' bg-white rounded-full border-none outline-none mt-14 hover:scale-125 transition-transform duration-300'>
                     <a className='text-black' onClick={handleDownload}>
+                        Download CV
+                    </a>
+                </button> */}
+
+                <button className='bg-white rounded-full border-none outline-none mt-14 hover:scale-125 transition-transform duration-300'>
+                    {/* Use the 'cv' variable directly in the href */}
+                    <a href={cv} download="Youssef_Yasser_Frontend_Developer_CV.pdf" className='text-black px-6 py-2 block'>
                         Download CV
                     </a>
                 </button>
